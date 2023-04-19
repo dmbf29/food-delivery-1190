@@ -21,6 +21,10 @@ class MealRepository
     @meals
   end
 
+  def find(id)
+
+  end
+
   private
 
   def load_csv
