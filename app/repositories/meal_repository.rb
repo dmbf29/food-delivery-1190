@@ -22,7 +22,9 @@ class MealRepository
   end
 
   def find(id)
-
+    @meals.find do |meal|
+      meal.id == id
+    end
   end
 
   private

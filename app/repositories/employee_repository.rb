@@ -12,8 +12,16 @@ class EmployeeRepository
     @employees
   end
 
-  def find(id)
+  def all_riders
+    @employees.select do |employee|
+      employee.rider?
+    end
+  end
 
+  def find(id)
+    @employees.find do |employee|
+      employee.id == id
+    end
   end
 
   def find_by_username(username)
